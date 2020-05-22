@@ -1,2 +1,2 @@
 # aniruddha121500.github.io
-Personal Website
+Hi I am Aniruddha Mukherjee and this is my personal website.
