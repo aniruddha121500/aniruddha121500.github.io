@@ -1,2 +1,11 @@
-# aniruddha121500.github.io
-Hi I am Aniruddha Mukherjee and this is my personal website.
+## C code in MarkDown
+
+```c
+#include <stdio.h>
+
+int main(int argc, char ** argv) {
+
+    puts("Hello World!\n");
+
+}
+```
