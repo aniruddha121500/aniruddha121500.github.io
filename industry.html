@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Static Website</title>
+    <style>
+        /* Use the San Francisco font */
+        @import url('https://fonts.googleapis.com/css?family=San+Francisco');
+        * {
+            font-family: 'San Francisco', sans-serif;
+        }
+
+        /* Set the background color to white */
+        body {
+            background-color: white;
+            margin: 0;
+        }
+
+        /* Create a light grey ribbon at the top */
+        .ribbon {
+            width: 100%;
+            height: 50px;
+            background-color: #F0F0F0; /* Change the color to a lighter shade of grey */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Create four buttons with a lighter shade of grey and rounded corners */
+        .button {
+            width: 150px;
+            height: 30px;
+            background-color: #D0D0D0; /* Change the color to a lighter shade of grey */
+            color: white;
+            text-align: center;
+            line-height: 30px;
+            margin: 10px;
+            border-radius: 10px; /* Add rounded corners to the buttons */
+        }
+
+        /* Change the button color when hovered */
+        .button:hover {
+            background-color: darkgrey;
+        }
+
+        /* Create links for each button */
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Create a container for the main content */
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Create the ribbon with four buttons -->
+    <div class="ribbon">
+        <div class="button"><a href="index.html">About Me</a></div>
+        <div class="button"><a href="course.html">Course Work</a></div>
+        <div class="button"><a href="research.html">Research Work</a></div>
+        <div class="button"><a href="industry.html">Industry Experience</a></div>
+    </div>
+
+    <!-- Create the main content for the About Me page -->
+    <div class="container">
+        <h1>About Me</h1>
+        <p>This is the default web home page. You can write something about yourself here.</p>
+    </div>
+</body>
+</html>
