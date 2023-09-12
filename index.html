@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Static Website</title>
+    <title>Basic Static Website</title>
     <style>
         /* Use the San Francisco font */
         @import url('https://fonts.googleapis.com/css?family=San+Francisco');
@@ -29,6 +29,7 @@
             position: fixed; /* Make the element stick to its position relative to the viewport */
             top: 0; /* Adjust the distance from the top edge of the viewport */
             left: 0; /* Adjust the distance from the left edge of the viewport */
+            z-index: 1000; /* Make sure the ribbon is above the splash screen */
         }
 
         /* Create four buttons with a lighter shade of grey and rounded corners */
@@ -76,9 +77,84 @@
             border-radius: 10px; /* Add rounded corners to the button */
             font-size: 24px; /* Increase the font size of the button */
         }
+
+        /* Create a splash screen with a welcome message and a white light flash effect */
+
+        /* Create a splash screen with a welcome message and a white light flash effect */
+
+        .splash {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 9999; /* Make sure it covers everything else */
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-direction:column;
+
+            animation-name:splash-fade-out; /* Fade out animation after 2.65 seconds*/
+            animation-duration:.5s;
+            animation-delay :2.5s;
+            animation-fill-mode :forwards;
+
+            -webkit-animation-name:splash-fade-out; 
+            -webkit-animation-duration:.5s;
+            -webkit-animation-delay :2.5s;
+            -webkit-animation-fill-mode :forwards;
+
+            -moz-animation-name:splash-fade-out; 
+            -moz-animation-duration:.5s;
+            -moz-animation-delay :2.5s;
+            -moz-animation-fill-mode :forwards;
+
+            -o-animation-name:splash-fade-out; 
+            -o-animation-duration:.5s;
+            -o-animation-delay :2.5s;
+            -o-animation-fill-mode :forwards;
+
+            -ms-animation-name:splash-fade-out; 
+            -ms-animation-duration:.5s;
+            -ms-animation-delay :2.5s;
+            -ms-animation-fill-mode :forwards;
+
+            pointer-events: none;
+        }
+
+        @keyframes splash-fade-out {
+            from {opacity: 1;}
+            to {opacity: 0; display:none;} /* Add this property to the keyframes */
+        }
+
+        @-webkit-keyframes splash-fade-out {
+            from {opacity: 1;}
+            to {opacity: 0; display:none;} /* Add this property to the keyframes */
+        }
+
+        @-moz-keyframes splash-fade-out {
+            from {opacity: 1;}
+            to {opacity: 0; display:none;} /* Add this property to the keyframes */
+        }
+
+        @-o-keyframes splash-fade-out {
+            from {opacity: 1;}
+            to {opacity: 0; display:none;} /* Add this property to the keyframes */
+        }
+
+        @-ms-keyframes splash-fade-out {
+            from {opacity: 1;}
+            to {opacity: 0; display:none;} /* Add this property to the keyframes */
+        }
     </style>
 </head>
 <body>
+    <!-- Create the splash screen with a welcome message and a white light flash effect -->
+    <div class="splash">
+      <div class="welcome-message" style="font-size: 42px">Welcome to Aniruddha Mukherjee's webpage!</div>
+    </div>
+
     <!-- Create the ribbon with four buttons -->
     <div class="ribbon">
         <div class="button"><a href="index.html">About Me</a></div>
