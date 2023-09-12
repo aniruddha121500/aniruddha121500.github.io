@@ -24,6 +24,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            /* Add these properties to make the ribbon fixed at the top */
+            position: fixed; /* Make the element stick to its position relative to the viewport */
+            top: 0; /* Adjust the distance from the top edge of the viewport */
+            left: 0; /* Adjust the distance from the left edge of the viewport */
         }
 
         /* Create four buttons with a lighter shade of grey and rounded corners */
@@ -54,6 +59,22 @@
             width: 80%;
             margin: auto;
             padding: 20px;
+
+            /* Add this property to create some space between the container and the ribbon */
+            margin-top: 70px; /* Adjust this value as needed */
+        }
+
+        /* Create a new style for the About Me button */
+        .about-button {
+            width: 200px; /* Increase the width of the button */
+            height: 50px; /* Increase the height of the button */
+            background-color: #F0F0F0; /* Make the button color match the ribbon color */
+            color: black; /* Change the font color to black */
+            text-align: center;
+            line-height: 50px; /* Adjust the line height to match the button height */
+            margin: 10px;
+            border-radius: 10px; /* Add rounded corners to the button */
+            font-size: 24px; /* Increase the font size of the button */
         }
     </style>
 </head>
@@ -68,8 +89,14 @@
 
     <!-- Create the main content for the About Me page -->
     <div class="container">
-        <h1>About Me</h1>
-        <p>This is the default web home page. You can write something about yourself here.</p>
+        
+        <!-- Replace the h1 tag with a div tag with the about-button class -->
+        
+        <div class="about-button">About Me</div>
+
+        
+        <!-- Increase the font size of the line -->
+        <p style="font-size: 11px; text-align: justify;">Insert about contents here!</p>
     </div>
 </body>
 </html>

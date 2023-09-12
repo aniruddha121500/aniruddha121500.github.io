@@ -24,11 +24,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            /* Add these properties to make the ribbon fixed at the top */
-            position: fixed; /* Make the element stick to its position relative to the viewport */
-            top: 0; /* Adjust the distance from the top edge of the viewport */
-            left: 0; /* Adjust the distance from the left edge of the viewport */
         }
 
         /* Create four buttons with a lighter shade of grey and rounded corners */
@@ -59,9 +54,6 @@
             width: 80%;
             margin: auto;
             padding: 20px;
-
-            /* Add this property to create some space between the container and the ribbon */
-            margin-top: 70px; /* Adjust this value as needed */
         }
 
         /* Create a new style for the About Me button */
@@ -95,8 +87,7 @@
         <div class="about-button">About Me</div>
 
         
-        <!-- Increase the font size of the line -->
-        <p style="font-size: 11px; text-align: justify;">Insert about contents here!</p>
+        <p>This is the default web home page. You can write something about yourself here.</p>
     </div>
 </body>
 </html>
