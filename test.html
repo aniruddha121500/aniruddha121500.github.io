@@ -101,6 +101,28 @@
             text-overflow : ellipsis;
 
         }
+
+        /* ADDED CSS FOR ELEMENT BELOW */
+
+        .text-element {
+            width: 80%; /* Adjust the width of the element as needed */
+            height: auto; /* Make the height of the element adjust to the content */
+            background-color: white; /* Change the background color of the element to white */
+            color: black; /* Change the font color to black */
+            text-align: left;
+            line-height: 1.5; /* Adjust the line height of the text as needed */
+            margin: 10px auto; /* Add some margin around the element and center it horizontally */
+            border-radius: 10px; /* Add rounded corners to the element */
+            font-size: 18px; /* Adjust the font size of the text as needed */
+            padding: 20px; /* Add some padding inside the element */
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* ADDED CSS FOR ELEMENT ABOVE */
+
     </style>
 </head>
 <body>
@@ -115,6 +137,27 @@
         <input type="text" style="margin-top: 40px; margin-left: 220px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
         <div class="about-button" style="margin-top: -50px;">Course Work</div>
         
+
+
+        <!-- Add this script tag before the closing body tag to link to a JavaScript file that will handle the filtering logic -->
+        <script src="filter.js"></script>
+        <div class="text-element" data-keywords="Harvard, Computer Science, Python"> <!-- Add a data-keywords attribute to each element with the relevant keywords that you want to filter by -->
+            <h3>Harvard University</h3> <!-- You can use any HTML tags inside the element to format your text -->
+            <p>Harvard University is a private Ivy League research university in Cambridge, Massachusetts. Established in 1636 and named for its first benefactor, clergyman John Harvard, Harvard is the oldest institution of higher learning in the United States and among the most prestigious in the world.</p>
+            <p>One of the courses offered by Harvard is CS50: Introduction to Computer Science. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML.</p>
+        </div>
+        <div class="text-element" data-keywords="MIT, Mathematics, Calculus">
+            <h3>Massachusetts Institute of Technology</h3>
+            <p>The Massachusetts Institute of Technology (MIT) is a private land-grant research university in Cambridge, Massachusetts. The institute has an urban campus that extends more than a mile (1.6 km) alongside the Charles River. The institute also encompasses a number of major off-campus facilities such as the MIT Lincoln Laboratory, the Bates Center, and the Haystack Observatory, as well as affiliated laboratories such as the Broad and Whitehead Institutes.</p>
+            <p>One of the courses offered by MIT is Calculus I. This course covers differential calculus and applications as well as an introduction to integral calculus. Topics include limits, continuity, derivatives, mean value theorem, maxima and minima, related rates, curve sketching, optimization problems, definite and indefinite integrals.</p>
+        </div>
+        <div class="text-element" data-keywords="Stanford, Engineering, Machine Learning">
+            <h3>Stanford University</h3>
+            <p>Stanford University is a private research university in Stanford, California. Stanford is known for its academic strength, wealth, selectivity, proximity to Silicon Valley, and ranking as one of the world's top universities. The university was founded in 1885 by Leland and Jane Stanford in memory of their only child, Leland Stanford Jr., who had died of typhoid fever at age 15.</p>
+            <p>One of the courses offered by Stanford is Machine Learning. This course provides a broad introduction to machine learning, data mining, and statistical pattern recognition. Topics include supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks), unsupervised learning (clustering, dimensionality reduction), best practices in machine learning (bias/variance theory; innovation process in machine learning), reinforcement learning and adaptive control.</p>
+        </div>
+
+
     </div>
 </body>
 </html>
