@@ -99,8 +99,18 @@
             overflow:hidden;
             white-space:no-wrap;
             text-overflow : ellipsis;
-
         }
+
+        /* ADDED CSS FOR LIST BELOW */
+        ul {
+            list-style-type: none;
+            margin-left:   0px;
+            margin-right:  0px;
+            padding-left:  0px;
+            padding-right: 0px;
+            /* overflow-y: auto; */
+        }
+        /* ADDED CSS FOR LIST ABOVE */
 
         /* ADDED CSS FOR ELEMENT BELOW */
         .element {
@@ -155,46 +165,145 @@
         <div class="button"><a href="research.html">Research Work</a></div>
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
-    <div class="container" style="margin-top: 0px;">
+    <div class="container" style="margin-top: 0px; margin-bottom: 0px;">
         <input type="text" style="margin-top: 40px; margin-left: 220px;" onkeyup="myFunction()" class="search-bar" placeholder="Search by University, Course, or Skill!">
         <div class="about-button" style="margin-top: -50px;">Course Work</div>
-        
-        <!-- <ul id="test-list">
+    </div>
+    <div class="container" style="margin-top: -50px;">
+        <ul style="margin-top: 10px;" id="test-list">
             <li>
-                <div class="text-element" data-keywords="Harvard, Computer Science, Python">
-                    <h3>Harvard University</h3>
-                    <p>Harvard University is a private Ivy League research university in Cambridge, Massachusetts. Established in 1636 and named for its first benefactor, clergyman John Harvard, Harvard is the oldest institution of higher learning in the United States and among the most prestigious in the world.</p>
-                    <p>One of the courses offered by Harvard is CS50: Introduction to Computer Science. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML.</p>
+                <div class="element">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
                 </div>
             </li>
             <li>
-                <div class="text-element" data-keywords="MIT, Mathematics, Calculus">
-                    <h3>Massachusetts Institute of Technology</h3>
-                    <p>The Massachusetts Institute of Technology (MIT) is a private land-grant research university in Cambridge, Massachusetts. The institute has an urban campus that extends more than a mile (1.6 km) alongside the Charles River. The institute also encompasses a number of major off-campus facilities such as the MIT Lincoln Laboratory, the Bates Center, and the Haystack Observatory, as well as affiliated laboratories such as the Broad and Whitehead Institutes.</p>
-                    <p>One of the courses offered by MIT is Calculus I. This course covers differential calculus and applications as well as an introduction to integral calculus. Topics include limits, continuity, derivatives, mean value theorem, maxima and minima, related rates, curve sketching, optimization problems, definite and indefinite integrals.</p>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
                 </div>
             </li>
             <li>
-                <div class="text-element" data-keywords="Stanford, Engineering, Machine Learning">
-                    <h3>Stanford University</h3>
-                    <p>Stanford University is a private research university in Stanford, California. Stanford is known for its academic strength, wealth, selectivity, proximity to Silicon Valley, and ranking as one of the world's top universities. The university was founded in 1885 by Leland and Jane Stanford in memory of their only child, Leland Stanford Jr., who had died of typhoid fever at age 15.</p>
-                    <p>One of the courses offered by Stanford is Machine Learning. This course provides a broad introduction to machine learning, data mining, and statistical pattern recognition. Topics include supervised learning (parametric/non-parametric algorithms, support vector machines, kernels, neural networks), unsupervised learning (clustering, dimensionality reduction), best practices in machine learning (bias/variance theory; innovation process in machine learning), reinforcement learning and adaptive control.</p>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
                 </div>
             </li>
-        </ul> -->
-
-        <!-- ELEMENT TEST BELOW -->
-        <div class="element">
-            <span class="element-header">This is the header</span>
-            <span class="element-subheader">This is the subheader</span>
-            <hr class="element-line">
-            <span class="element-text">
-                This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
-            </span>
-        </div>            
-        <!-- ELEMENT TEST ABOVE -->
-        
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>

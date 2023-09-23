@@ -99,8 +99,62 @@
             overflow:hidden;
             white-space:no-wrap;
             text-overflow : ellipsis;
-
         }
+
+        /* ADDED CSS FOR LIST BELOW */
+        ul {
+            list-style-type: none;
+            margin-left:   0px;
+            margin-right:  0px;
+            padding-left:  0px;
+            padding-right: 0px;
+            /* overflow-y: auto; */
+        }
+        /* ADDED CSS FOR LIST ABOVE */
+
+        /* ADDED CSS FOR ELEMENT BELOW */
+        .element {
+            background-color: #F0F0F0;
+            border-radius: 10px;
+            /* padding: 10px; */
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            margin-left: 10px;
+            /* margin-right: 50px; */
+        }
+
+        .element-header {
+            color: black;
+            font-size: 18px;
+            margin-left: 10px;
+            display: block;
+        }
+
+        .element-subheader {
+            color: rgb(169, 169, 169);
+            font-size: 14px;
+            margin-left: 10px;
+            display: block;
+        }
+
+        .element-line {
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            border-left: solid white;
+            border-right: solid white;
+            width: calc(100% - 30px);
+        }
+
+        .element-text {
+            color: black;
+            font-size: 14px;
+            margin-left: 10px;
+            /* margin-right: 10px; */
+            display: block;
+        }
+        /* ADDED CSS FOR ELEMENT ABOVE */
+
     </style>
 </head>
 <body>
@@ -111,9 +165,145 @@
         <div class="button"><a href="research.html">Research Work</a></div>
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
-    <div class="container" style="margin-top: 0px;">
-        <input type="text" style="margin-top: 40px; margin-left: 220px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
+    <div class="container" style="margin-top: 0px; margin-bottom: 0px;">
+        <input type="text" style="margin-top: 40px; margin-left: 220px;" onkeyup="myFunction()" class="search-bar" placeholder="Search by University, Course, or Skill!">
         <div class="about-button" style="margin-top: -50px;">Course Work</div>
+    </div>
+    <div class="container" style="margin-top: -50px;">
+        <ul style="margin-top: 10px;" id="test-list">
+            <li>
+                <div class="element">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="element" style="margin-top: 10px;">
+                    <span class="element-header">This is the header</span>
+                    <span class="element-subheader">This is the subheader</span>
+                    <hr class="element-line">
+                    <span class="element-text">
+                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
+                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                    </span>
+                </div>
+            </li>
+        </ul>
     </div>
 </body>
 </html>
