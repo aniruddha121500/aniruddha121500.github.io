@@ -14,7 +14,7 @@ searchInput.addEventListener("input", function() {
   for (var i = 0; i < textElements.length; i++) {
 
     // Get the data-keywords attribute of each element and convert it to uppercase
-    var keywords = textElements[i].getAttribute("data-keywords").toUpperCase();
+    var keywords = textElements[i].getAttribute("data-tags").toUpperCase();
 
     // Check if the filter value is contained in the keywords
     if (keywords.indexOf(filter) > -1) {
