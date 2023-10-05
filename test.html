@@ -52,6 +52,7 @@
         .button a {
             text-decoration: none;
             color: white;
+            display: block; /* Added this line */
         }
 
         /* Create a container for the main content */
@@ -77,9 +78,9 @@
             font-size: 24px; /* Increase the font size of the button */
         }
 
-        /* Create a new style for the search bar */
+        /* Create a new style for the search bar BELOW */
         .search-bar {
-            width: calc(100% - 230px); /* Subtract the width of the about-button and 10px from the container width */
+            width: calc(100% - 450px); /* width: calc(100% - 200px); */ /* calc(100% - 320px); */ /* Subtract the width of the about-button and 10px from the container width */
             height: 48px; /* Make the height of the search bar match the about-button height */
             background-color: #F0F0F0; /* Make the search bar color match the ribbon color */
             color: black; /* Change the font color to black */
@@ -100,6 +101,7 @@
             white-space:no-wrap;
             text-overflow : ellipsis;
         }
+        /* Create a new style for the search bar ABOVE */
 
         /* ADDED CSS FOR LIST BELOW */
         ul {
@@ -165,12 +167,12 @@
         <div class="button"><a href="research.html">Research Work</a></div>
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
-    <div class="container" style="margin-top: 0px; margin-bottom: 0px;">
-        <input type="text" style="margin-top: 40px; margin-left: 220px;" onkeyup="myFunction()" class="search-bar" placeholder="Search by University, Course, or Skill!">
-        <div class="about-button" style="margin-top: -50px;">Course Work</div>
+    <div class="container" style="margin-top: 0px; margin-bottom: 0px; z-index: 10; background-color: white;">
+        <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
+        <div class="about-button" style="position: fixed; top: 50px">Course Work</div>
     </div>
-    <div class="container" style="margin-top: -50px;">
-        <ul style="margin-top: 10px;" id="test-list">
+    <div class="container">
+        <ul style="margin-top: -10px;" id="test-list">
             <li>
                 <div class="element">
                     <span class="element-header">This is the header</span>
