@@ -65,39 +65,28 @@
             margin-top: 70px; /* Adjust this value as needed */
         }
 
-        /* Create a new style for the About Me button */
-        .about-button {
-            width: 200px; /* Increase the width of the button */
-            height: 50px; /* Increase the height of the button */
-            background-color: #F0F0F0; /* Make the button color match the ribbon color */
-            color: black; /* Change the font color to black */
-            text-align: center;
-            line-height: 50px; /* Adjust the line height to match the button height */
-            margin: 10px;
-            border-radius: 10px; /* Add rounded corners to the button */
-            font-size: 24px; /* Increase the font size of the button */
+        .element {
+            width: 100%; /* Make the element as wide as the container */
+            height: auto; /* Make the element height variable */
+            background-color: #F0F0F0; /* Set the background color to #F0F0F0 */
+            border-radius: 10px; /* Add rounded corners to the element */
+            padding: 10px; /* Add 10px of space around the content inside the element */
         }
+        
     </style>
 </head>
 <body>
     <!-- Create the ribbon with four buttons -->
     <div class="ribbon">
-        <div class="button"><a href="index.html">About Me</a></div>
+        <div class="button"><a href="about.html">About Me</a></div>
         <div class="button"><a href="course.html">Course Work</a></div>
         <div class="button"><a href="research.html">Research Work</a></div>
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
-
-    <!-- Create the main content for the About Me page -->
-    <div class="container">
-        
-        <!-- Replace the h1 tag with a div tag with the about-button class -->
-        
-        <div class="about-button">About Me</div>
-
-        
-        <!-- Increase the font size of the line -->
-        <p style="font-size: 11px; text-align: justify;">Insert about contents here!</p>
+    <div class="container" style="margin-top: 40px;">
+        <div class="element">
+            Hello World!
+        </div>
     </div>
 </body>
 </html>
