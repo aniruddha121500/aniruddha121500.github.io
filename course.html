@@ -161,44 +161,39 @@
             border-right: solid white;
             width: calc(100% - 30px);
         }
-
+        
         .element-text {
             color: black;
             font-size: 14px;
             margin-left: 10px;
-            /* margin-right: 10px; */
+            margin-right: 10px; /* Add this property to create some space on the right side of the text */
             display: block;
+
+            /* Add these properties to justify the text and add some vertical spacing */
+            text-align: justify; 
+            text-justify: inter-word; 
+            margin-top: 10px; 
         }
         /* ADDED CSS FOR ELEMENT ABOVE */
 
     </style>
 </head>
 <body>
-    <!-- Create the ribbon with four buttons -->
     <div class="ribbon">
         <div class="button"><a href="about.html">About Me</a></div>
         <div class="button"><a href="course.html">Course Work</a></div>
         <div class="button"><a href="research.html">Research Work</a></div>
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
-    <!-- <div class="ribbon"></div> -->
-    <!-- <div class="container" style="margin-top: 0px; margin-bottom: 0px; z-index: 10; background-color: white;">
-        <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
-        <div class="about-button" style="position: fixed; top: 50px">Course Work</div>
-    </div> -->
-    <!-- <div class="sub-container" style="margin-top: 0px; background-color: white;">
-        <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
-        <div class="about-button" style="position: fixed; top: 50px">Course Work</div>
-    </div> -->
     <div class="container">
         <div class="sub-container" style="top:50px">
-            <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
+            <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" id="myInput" onkeyup="myFunction()" placeholder="Search by University, Course, or Skill!">
             <div class="about-button" style="position: fixed; top: 50px">Course Work</div>
         </div>
-        <ul style="margin-top: 30px;" id="test-list">
+        <ul style="margin-top: 30px;" id="myUL">
             <li>
                 <div class="element">
-                    <span class="element-header">Advanced Data Analysis</span>
+                    <span class="element-header">STAT 448 Advanced Data Analysis</span>
                     <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
@@ -211,126 +206,130 @@
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
+                    <span class="element-header">STAT 432 Basics of Statistical Learning</span>
                     <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Topics in supervised and unsupervised learning are covered, including logistic regression, support vector machines, classification trees and nonparametric 
+                        regression. Model building and feature selection are discussed for these techniques, with a focus on regularization methods, such as lasso and ridge regression, 
+                        as well as methods for model selection and assessment using cross validation. Cluster analysis and principal components analysis are introduced as examples of 
+                        unsupervised learning. Course is instructed in R.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
+                    <span class="element-header">STAT 426 Statistical Modeling II</span>
                     <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        This is a continuation in the study of advanced statistical modeling techniques with a focus on categorical data. 
+                        The course explores logistic regression, generalized linear models, goodness-of-fit, link functions, count regression, log-linear models, 
+                        probability models for contingency tables, and ordinal response models. Statistical computing is an integral part of the course. Course is instructed in R.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
+                    <span class="element-header">ECON 471 Introduction to Applied Econometrics</span>
                     <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Introduction to specification, estimation, prediction and evaluation of econometric models, emphasizing the interplay between statistical theory and 
+                        economic applications. Course is instructed in R.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
+                    <span class="element-header">CS 441 Applied Machine Learning</span>
                     <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Techniques of machine learning to various signal problems: regression, including linear regression, multiple regression, regression forest and 
+                        nearest neighbors regression; classification with various methods, including logistic regression, support vector machines, nearest neighbors, 
+                        simple boosting and decision forests; clustering with various methods, including basic agglomerative clustering and k-means; resampling methods, 
+                        including cross-validation and the bootstrap; model selection methods, including AIC, stepwise selection and the lasso; hidden Markov models; 
+                        model estimation in the presence of missing variables; and neural networks, including deep networks. The course will focus on tool-oriented and 
+                        problem-oriented exposition. Application areas include computer vision, natural language, interpreting accelerometer data, and understanding audio data.
+                        Course is instructed in Python.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
+                    <span class="element-header">ACCY 200 Fundamentals of Accounting</span>
                     <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Survey course in the principles of accounting for students registered in schools and colleges other than the College of Business.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
-                    <span class="element-subheader">This is the subheader</span>
+                    <span class="element-header">ECON 437 Game Theory</span>
+                    <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Explores game theory and strategic decision making. Game theory is the study of strategic interaction where one person's actions affect the actions of others. 
+                        Introduces students to the tools for modeling and solving problems with strategic interaction. Will cover topics such as Nash equilibrium, dominance, voting, 
+                        bargaining, auction, adverse selection, each of which have broad applications in economics, politics, psychology, and everyday life.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
-                    <span class="element-subheader">This is the subheader</span>
+                    <span class="element-header">MATH 441 Differential Equations</span>
+                    <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Course in ordinary differential equations; topics include existence and uniqueness of solutions and the general theory of linear differential equations.
                     </span>
                 </div>
             </li>
             <li>
                 <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
-                    <span class="element-subheader">This is the subheader</span>
+                    <span class="element-header">FIN 221 Corporate Finance</span>
+                    <span class="element-subheader">University of Illinois - Urbana Champaign</span>
                     <hr class="element-line">
                     <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
-                    </span>
-                </div>
-            </li>
-            <li>
-                <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
-                    <span class="element-subheader">This is the subheader</span>
-                    <hr class="element-line">
-                    <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
-                    </span>
-                </div>
-            </li>
-            <li>
-                <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
-                    <span class="element-subheader">This is the subheader</span>
-                    <hr class="element-line">
-                    <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
-                    </span>
-                </div>
-            </li>
-            <li>
-                <div class="element" style="margin-top: 10px;">
-                    <span class="element-header">This is the header</span>
-                    <span class="element-subheader">This is the subheader</span>
-                    <hr class="element-line">
-                    <span class="element-text">
-                        This is the main body of the text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis lorem quis leo consequat luctus. 
-                        Morbi id nisi vitae nisi tincidunt aliquet. Quisque euismod augue quis lacus sagittis, at sollicitudin leo blandit.
+                        Introductory study of corporate financial management, in particular how the financial manager's choices add value to shareholder wealth through 
+                        investment financing and operating decisions.
                     </span>
                 </div>
             </li>
         </ul>
+        <script>
+            function myFunction() {
+
+                // Declare variables
+                var input, filter, ul, li, div, span, i, j, txtValue, found;
+                input = document.getElementById("myInput");
+                filter = input.value.toLowerCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    found = false; // flag to indicate if a match is found
+                    div = li[i].querySelector(".element"); // get the div element inside the li element
+                    span = div.getElementsByTagName("span"); // get all the span elements inside the div element
+                    for (j = 0; j < span.length; j++) { // loop through all the span elements
+                        txtValue = span[j].textContent || span[j].innerText; // get the text content of each span element
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) { // compare the text content with the input value
+                            found = true; // set the flag to true if a match is found
+                            break; // break the inner loop
+                        }
+                    }
+                    if (found) { // if a match is found, display the list item
+                        li[i].style.display = "";
+                    } else { // otherwise, hide the list item
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
     </div>
 </body>
 </html>

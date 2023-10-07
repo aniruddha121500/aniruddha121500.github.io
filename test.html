@@ -203,10 +203,10 @@
     </div> -->
     <div class="container">
         <div class="sub-container" style="top:50px">
-            <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" placeholder="Search by University, Course, or Skill!">
+            <input type="text" style="position: fixed; top: 60px; left: 320px;" class="search-bar" id="myInput" onkeyup="myFunction()" placeholder="Search by University, Course, or Skill!">
             <div class="about-button" style="position: fixed; top: 50px">Course Work</div>
         </div>
-        <ul style="margin-top: 30px;" id="test-list">
+        <ul style="margin-top: 30px;" id="myUL">
             <li>
                 <div class="element">
                     <span class="element-header">STAT 448 Advanced Data Analysis</span>
@@ -316,6 +316,52 @@
                 </div>
             </li>
         </ul>
+        <script>
+            // function myFunction() {
+            //     var input, filter, ul, li, a, i, txtValue;
+            //     input = document.getElementById("myInput");
+            //     filter = input.value.toUpperCase();
+            //     ul = document.getElementById("myUL");
+            //     li = ul.getElementsByTagName("li");
+            //     for (i = 0; i < li.length; i++) {
+            //         a = li[i].getElementsByTagName("div")[0];
+            //         txtValue = a.textContent || a.innerText;
+            //         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            //             li[i].style.display = "";
+            //         } else {
+            //             li[i].style.display = "none";
+            //         }
+            //     }
+            // }
+            function myFunction() {
+
+                // Declare variables
+                var input, filter, ul, li, div, span, i, j, txtValue, found;
+                input = document.getElementById("myInput");
+                filter = input.value.toLowerCase();
+                ul = document.getElementById("myUL");
+                li = ul.getElementsByTagName("li");
+
+                // Loop through all list items, and hide those who don't match the search query
+                for (i = 0; i < li.length; i++) {
+                    found = false; // flag to indicate if a match is found
+                    div = li[i].querySelector(".element"); // get the div element inside the li element
+                    span = div.getElementsByTagName("span"); // get all the span elements inside the div element
+                    for (j = 0; j < span.length; j++) { // loop through all the span elements
+                        txtValue = span[j].textContent || span[j].innerText; // get the text content of each span element
+                        if (txtValue.toLowerCase().indexOf(filter) > -1) { // compare the text content with the input value
+                            found = true; // set the flag to true if a match is found
+                            break; // break the inner loop
+                        }
+                    }
+                    if (found) { // if a match is found, display the list item
+                        li[i].style.display = "";
+                    } else { // otherwise, hide the list item
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
