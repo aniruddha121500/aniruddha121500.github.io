@@ -142,7 +142,7 @@
             width: 15px; /* Set the width of the dot */
             margin-left :5px ;/* Added this line*/
             margin-right :5px ;/* Added this line*/
-            background-color:#bbb ;/* Added this line*/
+            background-color: #F0F0F0; /* background-color:#bbb ; */ /* Added this line*/
             border-radius :50% ;/* Added this line*/
             display:inline-block ;/* Added this line*/
             cursor:pointer ;/* Added this line*/
@@ -155,9 +155,9 @@
        
        /* Add an active class to the current dot */
        .active {
-            background-color: #717171; /* Change the background color of the active dot */
+            background-color: darkgrey; /* background-color: #717171; */ /* Change the background color of the active dot */
        }
-       
+
        /* Add a prev and next button to the slideshow */
        .prev, .next {
             cursor: pointer; /* Change the cursor to a pointer when hovering over the buttons */
@@ -165,24 +165,36 @@
             width :150px ;/* Changed this property to match user's specification */
             height :30px ;/* Changed this property to match user's specification */
             padding :0 ;/* Changed this property to remove extra padding from buttons */
-            margin-top :-40px ;/* Changed this property to place buttons below ribbon as specified by user */
-            color :white ;/* Changed this property to match user's specification */
+            background-color: #D0D0D0;/* Changed this property to match user's specification */
             font-weight :bold ;/* Changed this property to match user's specification */
             font-size :18px ;/* Changed this property to match user's specification */
-            transition :0.6s ease ;/* Changed this property to match user's specification */
+            /* transition :0.6s ease ; */ /* Changed this property to match user's specification */
             border-radius :10px ;/* Changed this property to match user's specification */
-            user-select :none ;/* Changed this property to prevent text selection on buttons */
+            user-select :none;/* Changed this property to prevent text selection on buttons */
+            display: inline;
        }
        
        /* Position the next button to the right */
        .next { 
-            right :0 ;/* Changed this property to place button on right side as specified by user */ 
-            border-radius :10px 0 0 10px ;/* Changed this property to match user's specification */ 
+            right: 0; /* Changed this property to place button on right side as specified by user */ 
+            
+            /* Add these properties to center the icon horizontally and vertically */
+            text-align: center; /* Align the text horizontally in the center of the button */
+            line-height: 30px; /* Set the line height equal to the button height to center the text vertically */
+       }
+       
+       /* Position the previous button to the left */
+       .prev {
+            left: 0;
+            
+            /* Add these properties to center the icon horizontally and vertically */
+            text-align: center; /* Align the text horizontally in the center of the button */
+            line-height: 30px; /* Set the line height equal to the button height to center the text vertically */
        }
        
        /* On hover, add a black background color with a little bit see-through */
        .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8); /* Add a semi-transparent black background to the buttons on hover */
+            background-color: darkgrey; /* rgba(0,0,0,0.8); */ /* Add a semi-transparent black background to the buttons on hover */
        }
        
        /* Add a play and pause button to control the slideshow */
@@ -198,21 +210,41 @@
             border-radius :10px ;/* Changed this property to match user's specification */
             background-color :#D0D0D0 ;/* Changed this property to match user's specification */ 
             user-select :none ;/* Changed this property to prevent text selection on buttons */ 
-            transition :background-color .6s ease ;/* Changed this property to match user's specification */ 
+            /* transition :background-color 0.6s ease;*/ /* Changed this property to match user's specification */ 
             display :inline-block ;/* Changed this property to make buttons appear on the same line */ 
        }
        
        /* Position the play and pause buttons in the center */
        .play, .pause {
-         left: 50%; /* Center the buttons horizontally */
-         transform: translateX(-50%); /* Adjust the horizontal position of the buttons */
+            left: 50%; /* Center the buttons horizontally */
+            transform: translateX(-50%); /* Adjust the horizontal position of the buttons */
+          
+            /* Add these properties to center the icon horizontally and vertically */
+            text-align: center; /* Align the text horizontally in the center of the button */
+            line-height: 30px; /* Set the line height equal to the button height to center the text vertically */
        }
        
-       /* On hover, change the background color of play and pause button to darkgrey*/
-       .play:hover, .pause:hover {
-           background-color :darkgrey ;/* Added this line */
-       }
-       
+       /* TEST BELOW */
+       .button-container a {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Added a flexbox property to make the buttons align horizontally */
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 470px; /* Set the width of the container as specified by user */
+            /* margin: 0 auto; */ /* Center the container horizontally */
+        }
+        
+        /* Added a margin property to create some space between the buttons */
+        .button-container a:not(:last-child) {
+            margin-right: 10px; /* Add a right margin to all buttons except the last one */
+        }
+       /* TEST ABOVE */
+
     </style>
 </head>
 <body>
@@ -222,19 +254,21 @@
         <div class="button"><a href="research.html">Research Work</a></div>
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
-    <div class="slideshow">
-        </div style="margin-top=70px;">
-            <!-- Added a prev and next button to the slideshow -->
+    <div class="slideshow" style="margin-top: 60px;">
+        <div class="button-container">
+            <!-- Added a previous button  -->
             <a class="prev" onclick="plusSlides(-1)">❮</a>
-            <a class="next" onclick="plusSlides(1)">❯</a>
             
             <!-- Added a play and pause button to control the slideshow -->
             <a class="play" onclick="playSlides()">►</a>
             <a class="pause" onclick="pauseSlides()">❚❚</a>
+          
+            <!-- Added a next button  -->
+            <a class="next" onclick="plusSlides(1)">❯</a>
         </div>
 
         <!-- Added a slideshow-container div -->
-        <div class="slideshow-container">
+        <!-- <div class="slideshow-container">
             <div class="slide-element">
                 <span class="element-header">STAT 448 Advanced Data Analysis</span>
                 <span class="element-subheader">University of Illinois - Urbana Champaign</span>
@@ -271,7 +305,7 @@
                 </span>
                 <div class="slide-number">3 / 4</div>
                 <span class="dot" onclick="currentSlide(3)"></span> 
-            </div>
+            </div> 
             <div class="slide-element">
                 <span class="element-header">ECON 302 Intermediate Microeconomic Theory</span>
                 <span class="element-subheader">University of Illinois - Urbana Champaign</span>
@@ -282,7 +316,8 @@
                     Students will learn how to use mathematical tools and economic models to analyze various economic phenomena and policy issues.
                 </span>
                 <div class="slide-number">4 / 4</div>
-                <span class="dot" onclick="currentSlide(4)"></span>    
+                <span class="dot" onclick="currentSlide(4)"></span>  
+            </div> -->
             
             <!-- Added a script to make the slideshow work -->
             <script>
