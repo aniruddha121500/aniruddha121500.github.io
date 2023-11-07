@@ -56,12 +56,14 @@
         }
 
         /* Create a container for the main content */
-        /* .container {
+        .container {
             width: 80%;
             margin: auto;
             padding: 20px;
-            margin-top: 70px;
-        } */
+
+            /* Add this property to create some space between the container and the ribbon */
+            margin-top: 70px; /* Adjust this value as needed */
+        }
 
         .element {
             width: 100%; /* Make the element as wide as the container */
@@ -72,19 +74,10 @@
         }
 
         /* New CSS code for the table of contents and the container */
-        /* .content {
+        .content {
             display: flex;
             justify-content: space-between;
             margin-top: 40px;
-        } */
-
-        /* New CSS code for the table of contents and the container */
-        .container {
-            width: 80%;
-            margin: auto;
-            margin-top: 50px;
-            display: flex;
-            justify-content: space-between;
         }
 
         .table-of-contents {
@@ -92,7 +85,7 @@
         }
 
         .main-content {
-            width: 80%;
+            width: 75%;
         }
     </style>
 </head>
@@ -105,11 +98,12 @@
         <div class="button"><a href="industry.html">Industry Experience</a></div>
     </div>
     <!-- New HTML code for the table of contents and the container -->
-    <div class="container">
-        <div class="table-of-contents" style="margin-top: -10px;">
+    <div class="content">
+        <div class="table-of-contents">
             <div class="button"><a href="#section1">Section 1</a></div>
             <div class="button"><a href="#section2">Section 2</a></div>
             <div class="button"><a href="#section3">Section 3</a></div>
+            <!-- Add more buttons as needed -->
         </div>
         <div class="main-content">
             <div class="element" id="section1">
@@ -121,6 +115,7 @@
             <div class="element" id="section3">
                 Content for Section 3
             </div>
+            <!-- Add more elements as needed -->
         </div>
     </div>
 </body>
