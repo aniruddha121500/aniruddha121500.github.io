@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aniruddha Mukherjee's Webpage</title>
+    <style>
+        body {
+            background-color: #000033;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            padding: 50px;
+        }
+        .intro {
+            text-align: center;
+        }
+        .intro img {
+            width: 200px;
+            height: 200px;
+        }
+        .intro button {
+            margin: 20px;
+            padding: 10px 20px;
+        }
+        .course {
+            border-bottom: 1px solid white;
+            margin-bottom: 20px;
+        }
+        .course h2 {
+            margin: 0;
+        }
+        .course p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="section intro">
+        <h1>Welcome to Aniruddha Mukherjee's Webpage!</h1>
+        <img src="your_picture.jpg" alt="Aniruddha Mukherjee">
+        <p>Introductory paragraphs about yourself.</p>
+        <button onclick="window.open('your_resume.pdf')">Resume</button>
+        <button onclick="window.location.href='your_linkedin'">LinkedIn</button>
+    </div>
+    <div class="section courses">
+        <h1>Coursework</h1>
+        <!-- Repeat this part for each course -->
+        <div class="course">
+            <h2>Course Title</h2>
+            <p>University</p>
+            <p>Description of the course</p>
+        </div>
+        <!-- End of repeat -->
+    </div>
+    <div class="section research">
+        <h1>Research Work</h1>
+        <p>Details about your research work.</p>
+    </div>
+    <div class="section experience">
+        <h1>Industry Experience</h1>
+        <p>Details about your industry experience.</p>
+    </div>
+</body>
+</html>
