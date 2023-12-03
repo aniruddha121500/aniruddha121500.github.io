@@ -40,29 +40,29 @@
             border-radius: 10px;
         }
         .button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
             background-color: white;
             color: black;
+            /* padding: 15px 32px; */
             text-align: center;
             text-decoration: none;
             font-size: 16px;
+            /* margin: 4px 5px; */
             cursor: pointer;
             border: none;
             border-radius: 10px;
             width: 200px;
             height: 35px;
             margin-bottom: 10px;
-        }
 
+        }
         .button:hover {
             background-color: lightgrey;
         }
     </style>
 </head>
 <body>
-    <div class="container" style="margin-top: -40px;">
+    <div class="container">
         <div class="header">
             <img src="me.jpeg" alt="Aniruddha Mukherjee">
             <a href="https://www.linkedin.com/in/aniruddha-mukherjee-a4b2b6265" class="button" target="_blank">LinkedIn</a>
@@ -71,7 +71,7 @@
             <a href="research.pdf" class="button" target="_blank">Research</a>
             <a href="https://aniruddhamukherjeesite.wordpress.com" class="button" target="_blank">Previous Webpage</a>
         </div>
-        <div class="content" style="margin-left: 10px;">
+        <div class="content">
             <p>Your description here...</p>
         </div>
     </div>
