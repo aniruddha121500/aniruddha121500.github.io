@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Aniruddha Mukherjee</title>
+    <title>Your Name</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -33,18 +33,6 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
-
-        /* ADDED BELOW */
-        .name {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            background-color: white;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        /* ADDED ABOVE */
-
         .content {
             background-color: #fff;
             padding: 20px;
@@ -76,7 +64,6 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="name">Aniruddha Mukherjee</div>
             <img src="me.jpeg" alt="Aniruddha Mukherjee">
             <a href="https://www.linkedin.com/in/aniruddha-mukherjee-a4b2b6265" class="button" target="_blank">LinkedIn</a>
             <a href="resume_updated.pdf" class="button" target="_blank">Curriculum Vitae</a>
