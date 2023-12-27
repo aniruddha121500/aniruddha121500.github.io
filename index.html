@@ -33,7 +33,6 @@
             border-radius: 10px;
             margin-bottom: 10px;
         }
-
         .name {
             font-size: 21px;
             font-weight: bold;
@@ -44,7 +43,6 @@
             width: 180px;
             text-align: center;
         }
-
         .content {
             background-color: #fff;
             padding: 20px;
@@ -69,41 +67,33 @@
             height: 35px;
             margin-bottom: 10px;
         }
-
         .button:hover {
             background-color: lightgrey;
         }
-
-        /* Add this new CSS for the Read More button */
         .read-more-state {
           display: none;
         }
-
         .read-more-target {
           opacity: 0;
           max-height: 0;
           font-size: 0;
           transition: .25s ease;
         }
-
         .read-more-state:checked ~ .read-more-wrap .read-more-target {
           opacity: 1;
           font-size: inherit;
           max-height: 999em;
         }
-
         .read-more-state ~ .read-more-trigger:before {
           content: '+';
           transition: all 0.5s;
           color: black;
-          font-size: 2em; /* Increase the font size */
+          font-size: 2em;
         }
-
         .read-more-state:checked ~ .read-more-trigger:before {
           content: '-';
           transform: rotate(360deg);
         }
-
         .read-more-trigger {
           cursor: pointer;
           display: inline-block;
@@ -117,8 +107,8 @@
           right: 0;
           top: 0;
           transform: translateY(0);
+          z-index: 1; /* Added to make the hover text appear over the "About Me" segments */
         }
-
         .read-more-trigger:hover:after {
           content: attr(data-hover);
           position: absolute;
@@ -129,6 +119,7 @@
           color: #333;
           background-color: #ddd;
           border-radius: 5px;
+          z-index: 2; /* Added to make the hover text appear over the "About Me" segments */
         }
     </style>
 </head>
@@ -145,6 +136,7 @@
             <a href="https://aniruddhamukherjeesite.wordpress.com" class="button" target="_blank">Hobby Webpage</a>
         </div>
         <div style="display: flex; flex-direction: column; width: 80%;">
+            <!-- Your "About Me" segments here... -->
             <div class="content" style="margin-left: 10px; position: relative;">
                 <h2 style="display: inline;">About Me</h2>
                 <input type="checkbox" class="read-more-state" id="post-1" />
