@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aniruddha Mukherjee</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+        .header {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+        }
+        .header img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .name {
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+            width: 180px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+        }
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: black;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            width: 200px;
+            height: 35px;
+            margin-bottom: 10px;
+        }
+
+        .button:hover {
+            background-color: lightgrey;
+        }
+
+        /* Add this new CSS for the Read More button */
+        .read-more-state {
+          display: none;
+        }
+
+        .read-more-target {
+          opacity: 0;
+          max-height: 0;
+          font-size: 0;
+          transition: .25s ease;
+        }
+
+        .read-more-state:checked ~ .read-more-wrap .read-more-target {
+          opacity: 1;
+          font-size: inherit;
+          max-height: 999em;
+        }
+
+        .read-more-state ~ .read-more-trigger:before {
+          content: '+';
+          transition: all 0.5s;
+          color: black;
+          font-size: 2em; /* Increase the font size */
+        }
+
+        .read-more-state:checked ~ .read-more-trigger:before {
+          content: '-';
+          transform: rotate(360deg);
+        }
+
+        .read-more-trigger {
+          cursor: pointer;
+          display: inline-block;
+          padding: 0 .5em;
+          color: #666;
+          font-size: .9em;
+          line-height: 2;
+          border: none;
+          border-radius: .25em;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform: translateY(0);
+        }
+
+        .read-more-trigger:hover:after {
+          content: attr(data-hover);
+          position: absolute;
+          left: 0;
+          top: 100%;
+          white-space: nowrap;
+          padding: 5px;
+          color: #333;
+          background-color: #ddd;
+          border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="name" >Aniruddha<br>Mukherjee</div>
+            <img src="me.jpeg" alt="Aniruddha Mukherjee">
+            <a href="https://www.linkedin.com/in/aniruddha-mukherjee-a4b2b6265" class="button" target="_blank">LinkedIn</a>
+            <a href="resume_updated.pdf" class="button" target="_blank">Curriculum Vitae</a>
+            <a href="course_list.pdf" class="button" target="_blank">Courses Taken</a>
+            <a href="research.pdf" class="button" target="_blank">Research Experience</a>
+            <a href="industry.pdf" class="button" target="_blank">Industry Experience</a>
+            <a href="https://aniruddhamukherjeesite.wordpress.com" class="button" target="_blank">Hobby Webpage</a>
+        </div>
+        <div style="display: flex; flex-direction: column; width: 80%;">
+            <div class="content" style="margin-left: 10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-1" />
+                <label for="post-1" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-2" />
+                <label for="post-2" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-3" />
+                <label for="post-3" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-4" />
+                <label for="post-4" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-5" />
+                <label for="post-5" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-6" />
+                <label for="post-6" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-7" />
+                <label for="post-7" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="content" style="margin-left: 10px; margin-top: -10px; position: relative;">
+                <h2 style="display: inline;">About Me</h2>
+                <input type="checkbox" class="read-more-state" id="post-8" />
+                <label for="post-8" class="read-more-trigger" data-hover="Show More"></label>
+                <div class="read-more-wrap">
+                    <div class="read-more-target">
+                        <p>Your long paragraphs here...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* Add this new script for the Read More button */
+        document.querySelectorAll('.read-more-state').forEach(function(element) {
+            element.addEventListener('change', function() {
+                if(this.checked) {
+                    this.nextElementSibling.setAttribute('data-hover', 'Show Less');
+                } else {
+                    this.nextElementSibling.setAttribute('data-hover', 'Show More');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
