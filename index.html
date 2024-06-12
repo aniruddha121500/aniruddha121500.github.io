@@ -107,7 +107,7 @@
           right: 0;
           top: 0;
           transform: translateY(0);
-          z-index: 1; /* Added to make the hover text appear over the "About Me" segments */
+          z-index: 1;
         }
         .read-more-trigger:hover:after {
           content: attr(data-hover);
@@ -119,10 +119,8 @@
           color: #333;
           background-color: #ddd;
           border-radius: 5px;
-          z-index: 2; /* Added to make the hover text appear over the "About Me" segments */
+          z-index: 2;
         }
-
-        /* Additional CSS for the welcome screen and animation */
         .welcome-screen {
             position: fixed;
             top: 0;
@@ -137,7 +135,7 @@
             overflow: hidden;
         }
         .welcome-text {
-            font-size: 36px; /* Changed from 24px */
+            font-size: 36px;
             color: black;
             position: relative;
         }
@@ -148,7 +146,7 @@
             height: 100%;
             width: 100%;
             background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.8), rgba(255,255,255,0));
-            animation: beam 2.65s linear forwards; /* Adjusted the animation timing function to 'linear' for a constant speed */
+            animation: beam 2.65s linear forwards;
         }
         @keyframes beam {
             0% { transform: translateX(-100%); }
@@ -164,16 +162,15 @@
             <div class="beam"></div>
         </div>
     </div>
-
     <div class="container">
         <div class="header">
             <div class="name" >Aniruddha<br>Mukherjee</div>
             <img src="me.jpeg" alt="Aniruddha Mukherjee">
             <a href="https://www.linkedin.com/in/aniruddha-mukherjee-a4b2b6265" class="button" target="_blank">LinkedIn</a>
             <a href="resume_updated.pdf" class="button" target="_blank">Curriculum Vitae</a>
-            <a href="course_list.pdf" class="button" target="_blank">Courses Taken</a>
-            <a href="research.pdf" class="button" target="_blank">Research Experience</a>
             <a href="industry.pdf" class="button" target="_blank">Industry Experience</a>
+            <a href="research.pdf" class="button" target="_blank">Research Experience</a>
+            <a href="course_list.pdf" class="button" target="_blank">Courses Taken</a>
             <a href="https://aniruddhamukherjeesite.wordpress.com" class="button" target="_blank">Hobby Website</a>
         </div>
         <div style="display: flex; flex-direction: column; width: 80%;">
